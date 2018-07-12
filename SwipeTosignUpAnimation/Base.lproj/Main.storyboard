@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwipeTosignUpAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="px8-6k-Eav">
+                                <rect key="frame" x="94" y="567" width="187.5" height="50"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XCc-ch-Y3d">
+                                        <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="XCc-ch-Y3d" secondAttribute="height" multiplier="1:1" id="PF6-qz-Uxe"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEQ-pA-bnK">
+                                        <rect key="frame" x="34" y="22" width="0.0" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="dEQ-pA-bnK" firstAttribute="leading" secondItem="XCc-ch-Y3d" secondAttribute="trailing" constant="-10" id="4wz-0s-ghD"/>
+                                    <constraint firstItem="dEQ-pA-bnK" firstAttribute="centerY" secondItem="XCc-ch-Y3d" secondAttribute="centerY" id="G1V-4O-RHc"/>
+                                    <constraint firstItem="XCc-ch-Y3d" firstAttribute="top" secondItem="px8-6k-Eav" secondAttribute="top" id="bVb-Y5-R4B"/>
+                                    <constraint firstAttribute="bottom" secondItem="XCc-ch-Y3d" secondAttribute="bottom" constant="6" id="beI-iS-haU"/>
+                                    <constraint firstItem="XCc-ch-Y3d" firstAttribute="leading" secondItem="px8-6k-Eav" secondAttribute="leading" id="cDZ-iG-fPt"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.05241414235804398" green="0.66149155510037239" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="px8-6k-Eav" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:2" id="9Lp-5I-DJH"/>
+                            <constraint firstItem="px8-6k-Eav" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="IBT-pt-UV6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="px8-6k-Eav" secondAttribute="bottom" constant="50" id="vPT-LI-Tr3"/>
+                            <constraint firstItem="px8-6k-Eav" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="50:667" id="wuG-ln-AMJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="arrowImage" destination="XCc-ch-Y3d" id="ykN-F1-iC4"/>
+                        <outlet property="swipeIndicationTextLabel" destination="dEQ-pA-bnK" id="cRc-2h-9VD"/>
+                        <outlet property="swipeTextBackgroundView" destination="px8-6k-Eav" id="Brd-px-1m9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
