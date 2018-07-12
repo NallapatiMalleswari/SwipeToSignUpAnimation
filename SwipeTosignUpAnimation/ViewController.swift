@@ -17,7 +17,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        addGradientMaskToView(view: swipeTextBackgroundView,titleLabel: "Swipe to signup",arrowimage: #imageLiteral(resourceName: "arrow"))
+      let image = addGradientMaskToView(view: swipeTextBackgroundView,isLeftSwipe: true)
+        arrowImage.image = image
+        swipeIndicationTextLabel.text = "Swipe to sign up"
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -28,10 +30,9 @@ class ViewController: UIViewController {
 }
 
 extension ViewController{
-    fileprivate func addGradientMaskToView(view:UIView, titleLabel: String, arrowimage: UIImage) {
+    fileprivate func addGradientMaskToView(view:UIView,isLeftSwipe: Bool) -> UIImage{
         
-        arrowImage.image = arrowimage
-        swipeIndicationTextLabel.text = titleLabel
+        var arrowImage:UIImage?
         let gradientMask = CAGradientLayer()
         gradientMask.frame = view.bounds
         let gradientSize = view.height/view.width
@@ -47,12 +48,21 @@ extension ViewController{
         
         view.layer.mask = gradientMask
         
-        animation.fromValue = endLocations
-        animation.toValue = startLocations
+        if isLeftSwipe{
+            animation.fromValue = endLocations
+            animation.toValue = startLocations
+            arrowImage = #imageLiteral(resourceName: "leftarrow")
+        }
+        else{
+            animation.fromValue = startLocations
+            animation.toValue = endLocations
+            arrowImage = #imageLiteral(resourceName: "rightarrow")
+        }
         animation.repeatCount = HUGE
         animation.duration = 2
         
         gradientMask.add(animation, forKey: nil)
+        return arrowImage!
     }
     
 }
